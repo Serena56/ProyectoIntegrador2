@@ -4,6 +4,6 @@ const router = express.Router();
 // Controlador
 const controller = require('../controllers/generosCont.js');
 
-router.get('/', controller.mostrarListadoGeneros);
+router.get('/', controller.listadoDeGeneros);
 
 module.exports = router;
