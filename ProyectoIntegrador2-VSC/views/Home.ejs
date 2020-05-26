@@ -38,7 +38,7 @@
 
           <li class="li-home">
 
-            <form class="form-inline" action= "../4.Buscador/pagina4.html">
+            <form class="form-inline" action= "/home/busqueda">
 <!-- BUSCADOR -->
 <input id="buscador" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search..." aria-label="Search" name="buscador" required required minlength="3">
 <i class="fas fa-search" aria-hidden="true"></i>
@@ -49,9 +49,10 @@
         <li>
       <a id="buscador" href="" uk-icon="icon: search; ratio: 0,2"> </a>
         </li> -->
+
 <!-- BOTON DE GENEROS -->
             <li class="li-home"><a class="header-item" href="">
-              <a class="header-item" href="pagina2.ejs">Genres</a>
+              <a class="header-item" href="/generos">Genres</a>
             </a>
           </li>
 
@@ -67,7 +68,7 @@
                           <div class="uk-padding-large">
                               <h1>LOGIN!</h1>
 <!-- FORMULARIO DE LOGIN -->
-                              <form class="login-form" action="HomeLoggedIn.ejs" method="post">
+                              <form class="login-form" action= "/usuario/home" method="post">
                               <p>
                                 <input id="nombreUser" type="text" name="name" placeholder="NAME" required>
                               </p>

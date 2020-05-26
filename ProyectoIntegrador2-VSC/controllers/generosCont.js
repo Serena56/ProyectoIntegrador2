@@ -1,7 +1,11 @@
 const generosCont = {
-    listadoDeGeneros: function (req, res) {
-        res.render('Pagina2');
-    }
+    mostrarGeneros: function (req, res) {
+        res.render('pagina2');
+    },
+
+    peliculasPorGenero: function (req, res) {
+        res.render('pagina4');
+    },
  };
  
  module.exports = generosCont;  

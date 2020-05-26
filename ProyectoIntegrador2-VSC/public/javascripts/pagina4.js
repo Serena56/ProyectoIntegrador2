@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
 
 
          li = "<li>"
-         li +="<a href='../5.DetallePelicula/pagina5.html?idPelicula="+arrayDePeliculas[i].id+"'>"
+         li +="<a href='/peliculas/detalle?idPelicula="+arrayDePeliculas[i].id+"'>"
          li +=   "<img id='posters' src='"+urlImg + arrayDePeliculas[i].poster_path+"' style='width:300px;'>"
          li +="</a>"
          li += "</li>"

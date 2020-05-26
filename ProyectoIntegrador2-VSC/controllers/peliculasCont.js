@@ -1,7 +1,7 @@
 const peliculasCont = {
-    index: function (req, res) {
-     res.render('Pagina5');
- }
+    mostrarDetalle: function (req, res) {
+        res.render('pagina5');
+},
  };
  
  module.exports = peliculasCont;  

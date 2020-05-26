@@ -1,7 +1,11 @@
 const usuarioCont = {
-    index: function (req, res) {
-     res.send('usuario');
- }
+    homeLoggedIn: function (req, res) {
+        res.send('hola');
+ },
  };
  
  module.exports = usuarioCont;  
+
+
+
+//  falta lo del loggedIn que va aca
