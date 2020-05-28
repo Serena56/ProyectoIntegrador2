@@ -4,8 +4,20 @@ const router = express.Router();
 // Controlador
 const controller = require('../controllers/usuarioCont.js');
 
-// http://localhost:3000/usuario/home
-router.get('/home', controller.homeLoggedIn);
-//  falta lo del loggedIn que va aca
+// http://localhost:3000/usuario/logIn
+router.get('/logIn', controller.logIn);
+
+// http://localhost:3000/usuario/logIn
+router.post('/logIn', controller.guardarUsuario);
+
+// http://localhost:3000/usuario/loggedIn
+router.get('/loggedIn', controller.homeLoggedIn);
+
+
+
+
+
+
+
 
 module.exports = router;
