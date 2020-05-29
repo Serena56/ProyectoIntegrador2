@@ -23,7 +23,7 @@ if (arrayDePeliculasFavoritas.length>0) {
        })
         .then(function(pelicula) {
         for (var i = 0; i < arrayDePeliculasFavoritas.length; i++) {
-         document.querySelector("ul#favoritas").innerHTML += "<li> <a href='../5.DetallePelicula/pagina5LoggedIn.html?idPelicula="+ pelicula.id + "'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + pelicula.poster_path + " 'uk-cover'> </a> </li>"
+         document.querySelector("ul#favoritas").innerHTML += "<li> <a href='/usuario/detalle?idPelicula="+ pelicula.id + "'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + pelicula.poster_path + " 'uk-cover'> </a> </li>"
        }
 
         })
@@ -38,7 +38,7 @@ if (arrayDePeliculasFavoritas.length>0) {
 
          var li;
          li = "<li>"
-         li +=    "<a href='../2.ListadoDeGeneros/pagina2LoggedIn.html'></a>"
+         li +=    "<a href='/usuario/generos'></a>"
          li +=    "<h2> You don´t have any favorite movies! </h2>"
          li +=    "</a>"
          li += "</li>"

@@ -4,12 +4,8 @@ const homeCont = {
 },
 
     busqueda: function (req, res) {
-        res.render('pagina5');
+        res.render('pagina4');
 },
-
-// homeLoggedIn: function (req, res) {
-//     res.render('HomeLoggedIn');
-// },
 
 };
 

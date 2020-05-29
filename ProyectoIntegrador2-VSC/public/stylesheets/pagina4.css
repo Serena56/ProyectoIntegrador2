@@ -111,6 +111,17 @@ a.header-item:hover {
   text-decoration: none;
 }
 
+h1.uk-button {
+  text-decoration-style: none;
+  color: white;
+  font-size: 35px;
+}
+
+h1.uk-button:hover {
+  color: #333;
+  text-decoration-style:solid;
+}
+
 a.uk-button {
   text-decoration-style: none;
   color: white;

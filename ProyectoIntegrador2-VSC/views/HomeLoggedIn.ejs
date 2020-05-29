@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="uikit/dist/js/uikit-icons.min.js"></script>
+    <!-- <script src="uikit/dist/js/uikit-icons.min.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/HomeStyle.css">
     <title> Function(Movie) </title>
@@ -39,7 +39,7 @@
 
           <li class="li-home">
 <!-- BUSCADOR -->
-            <form class="form-inline" action="../4.Buscador/pagina4LoggedIn.html">
+            <form class="form-inline" action="/usuario/busqueda">
 <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search..." aria-label="Search" name="buscador" required required minlength="3">
 <i class="fas fa-search" aria-hidden="true"></i>
 </form>
@@ -47,20 +47,26 @@
 
         </li>
 
+        <!-- BOTON DE HOME -->
+        <li class="li-home"><a class="header-item" href="">
+          <a class="header-item" href="/usuario/home"> Home</a>
+        </a>
+      </li>
+
 <!-- GENEROS -->
             <li class="li-home"><a class="header-item" href="">
-              <a class="header-item" href="../2.ListadoDeGeneros/pagina2LoggedIn.html">Genres</a>
+              <a class="header-item" href="/usuario/generos">Genres</a>
             </a>
           </li>
 <!-- MIS FAVORITOS -->
           <li class="li-home"><a class="header-item" href="">
-            <a class="header-item" href="../6.Favorites/pagina6.html">Favorites</a>
+            <a class="header-item" href="/usuario/favoritos">Favorites</a>
           </a>
         </li>
 <!-- BOTON DE LOGIN -->
 
           <li class="li-home">
-            <a id="welcome" class="uk-button" href="#modal-full" uk-toggle> LOGIN </a>
+            <h1 id="welcome" class="uk-button" > WELCOME! </h1>
           </li>
 
         </ul>
@@ -129,13 +135,12 @@
 <!-- Footer-->
 
 <footer>
-    <ul class="ul-menu" type="none">
-        <li class="li-logo"> <a href="https://www.themoviedb.org/?language=es" </a>  <img src="/images/logoTMDb.png" alt="" class="logoTMDb"> </li>
-        <li class="li-menu"> <a  href="https://www.instagram.com/sofimollon/?hl=es-la"</a>  Sofía Mollón </li>
-        <li class="li-menu"> <a  href="https://www.instagram.com/vickyduque_/?hl=es-la"</a>  Victoria Duque </li>
-        <li class="li-menu"> <a  href="https://ar.linkedin.com/in/serena-mar%C3%ADa-dominguez-a48368146"</a> Serena Dominguez</li>
+  <ul class="ul-menu" type="none">
+      <li class="li-logo"> <a href="https://www.themoviedb.org/?language=es" </a>  <img src="/images/logoTMDb.png" alt="" class="logoTMDb"> </li>
+      <li class="li-menu"> <a  href="https://www.instagram.com/triniipardo/?hl=es-la"</a>  Trinidad Pardo </li>
+      <li class="li-menu"> <a  href="https://ar.linkedin.com/in/serena-mar%C3%ADa-dominguez-a48368146"</a> Serena Dominguez</li>
 
-    </ul>
+  </ul>
 </footer>
 
 <!-- Footer-->

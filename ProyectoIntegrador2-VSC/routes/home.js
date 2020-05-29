@@ -10,7 +10,5 @@ router.get('/', controller.index);
 // http://localhost:3000/home/busqueda
 router.get('/busqueda', controller.busqueda);
 
-// http://localhost:3000/home/LG
-// router.get('/LG', controller.homeLoggedIn);
 
 module.exports = router;

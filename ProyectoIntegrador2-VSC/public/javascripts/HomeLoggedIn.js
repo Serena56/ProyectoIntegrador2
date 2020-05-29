@@ -1,12 +1,10 @@
 window.onload = function() {
 
-if (sessionStorage.getItem("name")) {
-  var elNombre = sessionStorage.getItem("name")
-  var welcomeLoggedIn =  document.querySelector("#welcome");
-  welcomeLoggedIn.innerHTML = "Welcome " + elNombre + "!";
-
-
-}
+// if (sessionStorage.getItem("name")) {
+//   var elNombre = sessionStorage.getItem("name")
+  // var welcomeLoggedIn =  document.querySelector("#welcome");
+  // welcomeLoggedIn.innerHTML = "Welcome " + usuario.name + "!";
+// }
 
 // FETCH DE PELÍCULAS POPULARES
 fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b986a9112d505&page=1")
@@ -24,7 +22,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b98
       var title = arrayPeliculas[i].title
       var poster = arrayPeliculas[i].poster_path
 
-      document.querySelector("ul#popular").innerHTML += "<li> <a href='../5.DetallePelicula/pagina5LoggedIn.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+      document.querySelector("ul#popular").innerHTML += "<li> <a href='/usuario/detalle?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
 
     }
 
@@ -50,7 +48,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b98
         var title = arrayPeliculas[i].title
         var poster = arrayPeliculas[i].poster_path
 
-        document.querySelector("ul#top").innerHTML += "<li> <a href='../5.DetallePelicula/pagina5LoggedIn.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+        document.querySelector("ul#top").innerHTML += "<li> <a href='/usuario/detalle?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
 
 
       }
@@ -77,7 +75,7 @@ fetch("https://api.themoviedb.org/3/movie/popular?api_key=d6ff71a6bd2a94eaac5b98
         var title = arrayPeliculas[i].title
         var poster = arrayPeliculas[i].poster_path
 // console.log("https://image.tmdb.org/t/p/w500" + poster);
-        document.querySelector("ul#upcoming").innerHTML += "<li> <a href='../5.DetallePelicula/pagina5LoggedIn.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+        document.querySelector("ul#upcoming").innerHTML += "<li> <a href='/usuario/detalle?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
 
       }
 

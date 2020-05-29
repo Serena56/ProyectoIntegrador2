@@ -23,7 +23,7 @@ window.onload=function () {
     var id = generos[i].id
     var nombre = generos[i].name
 
-    document.querySelector("#generos").innerHTML += "<a class=uk-text-center href=../3.PeliculasPorGenero/pagina3LoggedIn.html?idDeGenero=" + id + "&nombreDeGenero="+nombre+">" + nombre + "</a>"
+    document.querySelector("#generos").innerHTML += "<a class=uk-text-center href=/usuario/peliculasPorGenero?idDeGenero=" + id + "&nombreDeGenero="+nombre+">" + nombre + "</a>"
   }
 })
 

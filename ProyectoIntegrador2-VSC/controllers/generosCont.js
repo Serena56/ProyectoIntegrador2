@@ -4,7 +4,7 @@ const generosCont = {
     },
 
     peliculasPorGenero: function (req, res) {
-        res.render('pagina4');
+        res.render('pagina3');
     },
  };
  
