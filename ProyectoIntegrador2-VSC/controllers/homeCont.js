@@ -1,11 +1,16 @@
+const DB = require('../database/models');
+
+
+
 const homeCont = {
    index: function (req, res) {
-    res.render('Home');
+    res.render('Home', );
 },
 
     busqueda: function (req, res) {
         res.render('pagina4');
-},
+}
+
 
 };
 

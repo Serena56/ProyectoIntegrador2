@@ -94,7 +94,7 @@ p.sinopsis{
   line-height:80px;
   text-align: center;
   font-size: 28px;
-  font-family: 'Anton', normal;
+  font-family: 'Anton', sans-serif;
   background-color: #CFD8DC;
   border-color: #B0BEC5;
   margin-top: 0%;
@@ -109,11 +109,12 @@ a svg {
 width: 100px;
 height: 100px;
 
+}
 
-}
-uk-active uk-transition-active{
+/* uk-active uk-transition-active{
   align: center;
-}
+} */
+
 .uk-align-center{
   margin-left: auto;
   margin-right: auto;
@@ -231,6 +232,7 @@ a.uk-button {
   text-decoration-style: none;
   color: white;
   font-size: 35px;
+  padding: 0p;
 }
 
 a.uk-button:hover {
@@ -243,6 +245,26 @@ form.login-form p input{
   padding: 5px;
   border-radius: 20px;
   border-color: black;
+  width: 43%;
+  
+}
+
+#submitt {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 46%;
+
+}
+
+#buscarUsuario {
+  width: 60%;
 }
 
 form.login-form p {

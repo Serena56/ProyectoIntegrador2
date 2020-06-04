@@ -19,6 +19,7 @@ nav {
   overflow: hidden;
 }
 
+
 nav ul {
   margin: 0;
   margin-top: -5px;
@@ -47,6 +48,10 @@ nav ul li {
   height: 60px;
   font-family: 'Anton', sans-serif;
   font-size: 35px;
+}
+
+#idUsuario {
+  width: 150;
 }
 
 nav ul li.logo {
@@ -89,6 +94,7 @@ a.uk-button {
   text-decoration-style: none;
   color: white;
   font-size: 35px;
+  padding: 0px;
 }
 
 a.uk-button:hover {
@@ -101,7 +107,64 @@ form.login-form p input{
   padding: 5px;
   border-radius: 20px;
   border-color: black;
+  width: 43%;
 }
+
+
+#submitt {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 46%;
+
+}
+
+#tituloBusqueda{
+  color: black;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+padding: 30px;
+text-decoration: underline;
+font-size: 60px; 
+margin-left: 35px;
+
+}
+
+#tituloBusqueda:hover{
+  color: #FFD740;
+}
+
+
+#textoBusqueda {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: black;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase; 
+  text-align: center; 
+  font-size: 20px; 
+  padding: 20px; 
+  width: 60%; 
+  border-color: black; 
+  border-radius: 20px; 
+  margin-left: 35%;
+  width: 200%;
+  
+}
+
+#textoBusqueda:hover{
+  color: #FFD740;
+} 
+
 
 form.login-form p {
  color: black;
@@ -152,6 +215,8 @@ div h3 {
   width: 250px;
 
 }
+
+
 
 img.uk-align-center {
   border-radius: 10px;

@@ -10,6 +10,12 @@ router.get('/logIn', controller.logIn);
 // http://localhost:3000/usuario/logIn
 router.post('/logIn', controller.guardarUsuario);
 
+// http://localhost:3000/usuario/signIn
+router.get('/signIn', controller.signIn);
+
+// http://localhost:3000/usuario/signIn
+router.post('/signIn', controller.confirmarUsuario);
+
 // http://localhost:3000/usuario/home
 router.get('/home', controller.homeLoggedIn);
 
@@ -27,6 +33,15 @@ router.get('/detalle', controller.mostrarDetalle);
 
 // http://localhost:3000/usuario/favoritos
 router.get('/favoritos', controller.mostrarFavoritos);
+
+// http://localhost:3000/usuario/buscarUsuario
+router.get('/buscarUsuario', controller.mostrarBuscarUsuario);
+
+// http://localhost:3000/usuario/buscarUsuario
+router.get('/resultadoBusquedaUsuario', controller.buscarUsuarioFunction);
+
+// http://localhost:3000/usuario/resultadoBusquedaUsuario
+router.get('/resultadoBusquedaUsuario', controller.resultadoBusquedaUsuario);
 
 
 

@@ -131,6 +131,7 @@ a.uk-button {
   text-decoration-style: none;
   color: white;
   font-size: 35px;
+  padding: 0px;
 }
 
 a.uk-button:hover {
@@ -143,6 +144,26 @@ form.login-form p input{
   padding: 5px;
   border-radius: 20px;
   border-color: black;
+  width: 43%;
+  
+}
+
+#submitt {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 46%;
+
+}
+
+#buscarUsuario {
+  width: 60%;
 }
 
 form.login-form p {
