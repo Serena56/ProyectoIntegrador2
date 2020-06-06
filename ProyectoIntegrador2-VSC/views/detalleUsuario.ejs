@@ -90,21 +90,34 @@
 
 <main> 
 
-    <% var a = 0 %>
 
-<% if(usuario.length != 0) { %>
-        <% for(let i = 0; i < usuario.length; i++) { %>
-            <h1 id="tituloBusqueda">  "<%= usuario[i].nombre_de_usuario %>"   RESULT Nº<%=a = a + 1%>  :</h1>
-            <hr>
-                <a id="textoBusqueda" href= "/usuario/detalleUsuario/<%= usuario [i].id %> ">  Nombre: <%= usuario[i].nombre_de_usuario %> | Email: <%= usuario[i].email %> </a href=>
-                    <hr>
+    <h1 id="tituloBusqueda">  "Welcome to <%= elUsuarioSeleccionado.nombre_de_usuario %>'s profile!" </h1>
+    <hr>
+    <ul >
+        <li id="itemBusqueda" >
+            <b> Email : </b> <%= elUsuarioSeleccionado.email %>
+        </li>
+        <li id="itemBusqueda">
+            <b> Birthdate : </b> <%= elUsuarioSeleccionado.fecha_de_nacimiento %>
+        </li>
 
-                    
-            <% } %> 
-            <h1 id="tituloBusqueda"> Click on your friend's data and go see his/her profile!</h1>
-    <% } else { %>
-        <a id="tituloBusqueda" href= "/usuario/buscarUsuario">User not found, try another email or name please!!</a>
-    <% } %> 
+        <li id="tituloReviews">
+            <b> <%= elUsuarioSeleccionado.nombre_de_usuario %>'s Reviews :
+        </li>
+
+        <% var a = 0 %>
+        <% for( let i = 0; i < elUsuarioSeleccionado.resenas.length; i++) { %>
+        <li id="itemBusqueda">   Review Nº<%=a = a + 1%> : 
+       "<%= elUsuarioSeleccionado.resenas[i].texto_de_reseña %>" <a id="aBusqueda"href="/usuario/detalle?idPelicula=<%= elUsuarioSeleccionado.resenas[i].id_pelicula %>"> (Movie Details)</a> </li> 
+        <% } %>
+    </ul>
+    <br>
+    <br>
+    <a id="clickHere" href="/usuario/buscarUsuario"> Click here and search other friends! </a>
+
+    
+    <br>
+    <br>
 
 
 

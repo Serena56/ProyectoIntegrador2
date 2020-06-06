@@ -143,6 +143,39 @@ margin-left: 35px;
   color: #FFD740;
 }
 
+#itemBusqueda {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: black;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase; 
+  /* text-align: center;  */
+  font-size: 30px; 
+  padding: 20px; 
+  width: 60%; 
+  border-color: black; 
+  border-radius: 20px; 
+  margin-left: 1%;
+  width: 200%;  
+  text-decoration: underline;
+}
+
+#tituloReviews {
+  color: #FFD740;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  padding: 30px;
+  text-decoration: underline;
+  font-size: 60px; 
+  text-decoration: underline;
+}
+
+#aBusqueda {
+  color: #FFD740;
+
+}
 
 #textoBusqueda {
   margin-bottom: 20px;
@@ -163,7 +196,26 @@ margin-left: 35px;
 
 #textoBusqueda:hover{
   color: #FFD740;
+  text-align: center; 
 } 
+
+
+#clickHere{
+  color: #FFD740;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase; 
+  text-align: center; 
+  font-size: 40px; 
+  padding: 20px; 
+  width: 60%; 
+  border-color: black; 
+  margin-left: 30%;
+} 
+
+
+
 
 
 form.login-form p {

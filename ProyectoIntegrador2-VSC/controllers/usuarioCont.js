@@ -85,6 +85,9 @@ resultadoBusquedaUsuario: function (req, res) {
 buscarUsuarioFunction: function (req, res) {
 
     DB.Usuarios.findAll({
+        include: [
+            { association: "resenas" },
+        ],
         where: {
             [OP.or]: {
                 email: {[OP.like]: "%" + req.query.usuarioBuscado + "%"},
@@ -97,19 +100,30 @@ buscarUsuarioFunction: function (req, res) {
         usuario: resultado,
         })
 
-    // if(resultado.length != 0) {     
-    //     res.render('resultadoBusquedaUsuario', {
-        
-    //         usuario: resultado
-    //     })
-    //     } else {
-    //         res.render('resultadoBusquedaUsuario', {
-    //             usuario: "User not found, try another email or name please"
-    //     })
-    //   }
-
     })
 },
+
+
+mostrarDetalleUsuario: function (req, res) {
+    DB.Usuarios
+    .findAll(
+        { where: { 
+            id: req.params.id
+         },
+
+         include: { association: 'resenas' }
+        
+        })
+   
+    .then(results => { 
+        return res.render('detalleUsuario', { 
+            elUsuarioSeleccionado: results[0] });
+  })
+  .catch(error => { 
+      return res.send("error:" + error)
+});
+},
+
 
 
 };

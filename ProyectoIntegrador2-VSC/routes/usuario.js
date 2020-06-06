@@ -43,6 +43,11 @@ router.get('/resultadoBusquedaUsuario', controller.buscarUsuarioFunction);
 // http://localhost:3000/usuario/resultadoBusquedaUsuario
 router.get('/resultadoBusquedaUsuario', controller.resultadoBusquedaUsuario);
 
+// http://localhost:3000/usuario/detalleUsuario
+router.get('/detalleUsuario/:id', controller.mostrarDetalleUsuario);
+
+
+
 
 
 
