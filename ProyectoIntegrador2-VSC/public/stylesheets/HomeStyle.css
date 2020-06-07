@@ -194,6 +194,23 @@ margin-left: 35px;
   
 }
 
+#userReview {
+  padding: 5px;
+  border-radius: 20px;
+  border-color: black;
+  width: 43%;
+}
+
+#ranking{
+  padding: 5px;
+  border-radius: 20px;
+  border-color: black;
+  width: 43%;
+  margin-left: 40px;
+}
+
+
+
 #textoBusqueda:hover{
   color: #FFD740;
   text-align: center; 

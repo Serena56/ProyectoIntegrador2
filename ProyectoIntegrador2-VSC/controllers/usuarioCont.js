@@ -1,6 +1,6 @@
 const DB = require('../database/models');
 const OP = DB.Sequelize.Op;
-const bcrypt = require('bcryptjs');
+let bcrypt = require('bcryptjs');
 const moduloLogin = require('../modulo-login');
 
 
@@ -50,7 +50,9 @@ mostrarBusqueda: function (req, res) {
 },
 
 mostrarDetalle: function (req, res) {
-    res.render('pagina5LoggedIn');
+    res.render('pagina5LoggedIn', {
+        idPelicula: req.query.idPelicula,
+       })
 },
 
 mostrarFavoritos: function (req, res) {
@@ -123,6 +125,45 @@ mostrarDetalleUsuario: function (req, res) {
       return res.send("error:" + error)
 });
 },
+
+
+mostrarCrearReview: function (req, res) {
+     res.render('crearReview', {
+     idPelicula: req.query.idPelicula,
+    })
+},
+
+
+crearReview: function (req, res) {
+    // res.send(req.body.userMail)
+    moduloLogin.validar(req.body.userMail,req.body.userPassword)
+    .then(function(resultado) {
+     if(resultado != undefined) {
+
+     // res.send(resultado);
+    DB.Resenas.create({
+        id_pelicula: req.body.idPelicula,
+        id_usuario: resultado.id,
+        texto_de_reseña: req.body.userReview,
+        puntaje_sobre_pelicula: req.body.rating
+
+    })
+    .then(function(resultado) {
+        res.send("se creo la reseña")
+    })
+
+    } else {
+        res.send("Hubo un problema! La contraseña o el mail no corresponden")
+    }
+    
+
+    })
+},
+
+
+
+
+
 
 
 

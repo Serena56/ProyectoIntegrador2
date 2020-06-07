@@ -108,7 +108,8 @@
         <% var a = 0 %>
         <% for( let i = 0; i < elUsuarioSeleccionado.resenas.length; i++) { %>
         <li id="itemBusqueda">   Review Nº<%=a = a + 1%> : 
-       "<%= elUsuarioSeleccionado.resenas[i].texto_de_reseña %>" <a id="aBusqueda"href="/usuario/detalle?idPelicula=<%= elUsuarioSeleccionado.resenas[i].id_pelicula %>"> (Movie Details)</a> </li> 
+       "<%= elUsuarioSeleccionado.resenas[i].texto_de_reseña %>" <a id="aBusqueda"href="/usuario/detalle?idPelicula=<%= elUsuarioSeleccionado.resenas[i].id_pelicula %>"> (Movie Details)</a> 
+        </li> 
         <% } %>
     </ul>
     <br>

@@ -46,6 +46,11 @@ router.get('/resultadoBusquedaUsuario', controller.resultadoBusquedaUsuario);
 // http://localhost:3000/usuario/detalleUsuario
 router.get('/detalleUsuario/:id', controller.mostrarDetalleUsuario);
 
+// http://localhost:3000/usuario/crearReview
+router.get('/crearReview', controller.mostrarCrearReview);
+
+// http://localhost:3000/usuario/crearReview
+router.post('/crearReview', controller.crearReview);
 
 
 

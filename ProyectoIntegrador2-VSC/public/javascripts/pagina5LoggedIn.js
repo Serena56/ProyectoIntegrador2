@@ -80,6 +80,7 @@ var idPelicula = new URLSearchParams (window.location.search).get("idPelicula")
             var id = arrayDePeliculas[i].id
             var poster = arrayDePeliculas[i].poster_path
             document.querySelector("ul#popular").innerHTML += "<p><a href='/usuario/detalle?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a></p>"
+            document.querySelector("ul#popular").innerHTML += "<p><a href='/usuario/crearReview?idPelicula="+id+"'> </a></p>"
       }
     })
 

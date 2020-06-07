@@ -138,4 +138,8 @@ VALUES (619264, 5, 'No es de mis favoritas pero vale la pena verla', '2019-11-08
 INSERT INTO `reseñas` (`id_pelicula`,`id_usuario`,`texto_de_reseña`,`fecha_de_creacion`, `fecha_de_actualizacion`, `puntaje_sobre_pelicula`)
 VALUES (481848, 6, 'No pare de llorar en toda la pelicula pero vale la pena verla', '2020-02-21',  '2020-02-21', 7);
 
+ALTER TABLE ProyectoIntegrador2.reseñas MODIFY COLUMN fecha_de_actualizacion TIMESTAMP on update CURRENT_TIMESTAMP NULL;
+
+ALTER TABLE ProyectoIntegrador2.reseñas MODIFY COLUMN fecha_de_creacion timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL;
+
 
