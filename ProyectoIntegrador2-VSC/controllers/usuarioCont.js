@@ -22,7 +22,7 @@ const usuarioCont = {
 
      let contraseñaEncriptada = bcrypt.hashSync('req.body.userPassword',10);
 
-     DB.Usuarios.create({
+     DB.usuario.create({
             nombre_de_usuario: usuario.nombre_de_usuario,
 			email: usuario.email,
 			password: contraseñaEncriptada,
@@ -49,11 +49,30 @@ mostrarBusqueda: function (req, res) {
     res.render('pagina4LoggedIn');
 },
 
-mostrarDetalle: function (req, res) {
-    res.render('pagina5LoggedIn', {
-        idPelicula: req.query.idPelicula,
-       })
-},
+// detallePelicula: function (req, res) {
+//     res.render('pagina5LoggedIn', {
+//         idPelicula: req.query.idPelicula,
+//        })
+// },
+
+detallePelicula: (req, res) => {
+    DB.Resenas
+    .findAll ({
+        where: [
+           { id_pelicula: req.query.idPelicula }
+        ], 
+        include: ['usuario']
+    }) 
+    .then(resenas => {
+        return res.render('pagina5LoggedIn', {
+            resenaPelicula: resenas,
+            idPelicula: req.query.idPelicula
+        });
+    }) 
+    .catch(error => {
+        res.send (error)
+    })
+}, 
 
 mostrarFavoritos: function (req, res) {
     res.render('pagina6');
@@ -86,7 +105,7 @@ resultadoBusquedaUsuario: function (req, res) {
 
 buscarUsuarioFunction: function (req, res) {
 
-    DB.Usuarios.findAll({
+    DB.usuario.findAll({
         include: [
             { association: "resenas" },
         ],
@@ -107,7 +126,7 @@ buscarUsuarioFunction: function (req, res) {
 
 
 mostrarDetalleUsuario: function (req, res) {
-    DB.Usuarios
+    DB.usuario
     .findAll(
         { where: { 
             id: req.params.id
@@ -126,45 +145,9 @@ mostrarDetalleUsuario: function (req, res) {
 });
 },
 
-
-mostrarCrearReview: function (req, res) {
-     res.render('crearReview', {
-     idPelicula: req.query.idPelicula,
-    })
+misReviews: function (req, res) {
+    res.render('misReviews');
 },
-
-
-crearReview: function (req, res) {
-    // res.send(req.body.userMail)
-    moduloLogin.validar(req.body.userMail,req.body.userPassword)
-    .then(function(resultado) {
-     if(resultado != undefined) {
-
-     // res.send(resultado);
-    DB.Resenas.create({
-        id_pelicula: req.body.idPelicula,
-        id_usuario: resultado.id,
-        texto_de_reseña: req.body.userReview,
-        puntaje_sobre_pelicula: req.body.rating
-
-    })
-    .then(function(resultado) {
-        res.send("se creo la reseña")
-    })
-
-    } else {
-        res.send("Hubo un problema! La contraseña o el mail no corresponden")
-    }
-    
-
-    })
-},
-
-
-
-
-
-
 
 
 };

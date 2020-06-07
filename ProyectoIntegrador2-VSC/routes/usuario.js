@@ -29,7 +29,7 @@ router.get('/peliculasPorGenero', controller.mostrarPelisPorGenero);
 router.get('/busqueda', controller.mostrarBusqueda);
 
 // http://localhost:3000/usuario/detalle
-router.get('/detalle', controller.mostrarDetalle);
+router.get('/detalle', controller.detallePelicula);
 
 // http://localhost:3000/usuario/favoritos
 router.get('/favoritos', controller.mostrarFavoritos);
@@ -46,11 +46,20 @@ router.get('/resultadoBusquedaUsuario', controller.resultadoBusquedaUsuario);
 // http://localhost:3000/usuario/detalleUsuario
 router.get('/detalleUsuario/:id', controller.mostrarDetalleUsuario);
 
-// http://localhost:3000/usuario/crearReview
-router.get('/crearReview', controller.mostrarCrearReview);
+// // http://localhost:3000/usuario/crearReview
+// router.get('/crearReview', controller.mostrarCrearReview);
 
-// http://localhost:3000/usuario/crearReview
-router.post('/crearReview', controller.crearReview);
+// // http://localhost:3000/usuario/crearReview
+// router.post('/crearReview', controller.crearReview);
+
+// // http://localhost:3000/usuario/detalle
+// router.post('/detalle', controller.crearReview);
+
+// // http://localhost:3000/usuario/creaResena
+// router.post('/creaResena', controller.creaResena);
+
+// http://localhost:3000/usuario/misReviews
+router.get('/misReviews', controller.misReviews);
 
 
 

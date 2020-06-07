@@ -110,10 +110,153 @@
 </div>
 
 <hr>
-<br>
-<br>
+
+<!-- <h1>CREATE A REVIEW FOR <%= idPelicula %>!</h1>
+FORMULARIO DE LOGIN -->
+<!-- <form class="login-form" action= "/usuario/detalle" method="POST">
+                    <p>
+                      <input type="hidden" name="id_pelicula" value="<%= idPelicula %>">
+                    </p>
+                    <p>
+                    <input id="email"  type="email" name="email" placeholder="MAIL" required>
+                    </p>
+                    <p>
+                    <input type="password"  name="password" id="password"  placeholder="PASSWORD" required>
+                    </p>
+                    <br>
+                    <p>
+                      <h3> PLEASE WRITE YOUR REVIEW HERE!</h3>
+                    </p>
+                    <p>
+                      <textarea name="texto_de_reseña" id="userReview" cols="5" rows="5" required> </textarea>
+                      </p>
+                      <p>
+                        <select name="puntaje_sobre_pelicula">
+
+                          <option selected> CHOOSE A RATING! </option>
+                          
+                          <option value="1" >1</option>
+
+                          <option value="2" >2</option>
+                          
+                          <option value="3" >3</option>
+
+                          <option value="4" >4</option>
+
+                          <option value="5" >5</option>
+                          
+                          <option value="6" >6</option>
+
+                          <option value="7" >7</option>
+
+                          <option value="8" >8</option>
+                          
+                          <option value="9" >9</option>
+
+                          <option value="10" >10</option>
+                          
+                          </select>
+                      </p>
+                    <p>
+                    <button id="submit" type="submit" name="button" value="Login">
+                        SUBMIT
+                    </button>
+                    </p>
+                    </form> --> 
+
+
+
+<% if (resenaPelicula.length !=0) { %>
+  <ul>
+    <h2 id="tituloBusqueda"> FILM REVIEW'S:</h2>
+      <% for(let i= 0; i< resenaPelicula.length; i++) { %>
+          <li id="tituloReviews">
+              <p> "<%= resenaPelicula[i].texto_de_reseña%>" </p>
+            </li>
+            <li id="itemBusqueda">
+              <p>REVIEWED BY: <a id="aBusqueda" href="/usuario/detalleUsuario/<%=resenaPelicula[i].usuario.id %>"> <%= resenaPelicula[i].usuario.nombre_de_usuario %></a> </p>
+            </li>
+            <li id="itemBusqueda">
+              <p>LAST UPDATE: <%= resenaPelicula[i].fecha_de_actualizacion %></p>
+            </li>
+            <li id="itemBusqueda">
+              <p>CREATION DATE: <%= resenaPelicula[i].fecha_de_creacion %></p>
+            </li>
+            <li id="itemBusqueda">
+              <p ><%= resenaPelicula[i].usuario.nombre_de_usuario %>'S RATE: <%= resenaPelicula[i].puntaje_sobre_pelicula %></p>
+            </li>
+            <hr>
+          <hr>
+          <% } %>
+
+  </ul>
+
+  <% } else { %>
+      <h2 id="tituloBusqueda" >THERE'S NO REVIEWS FOR THIS MOVIE YET, ADD YOURS!</h2> 
+      <% } %>
+
+
+        <h2 id="tituloBusqueda"> TELL US WHAT YOU THINK ABOUT THIS MOVIE!</h2>
+        <form style="text-align: center;" class="login-form" action="/resena/creaResena" method="POST">
+            <input id="inputDetalle" type="hidden" value="<%=idPelicula%>" name="id_pelicula">
+            <div>
+          <input id="inputDetalle" type="email" placeholder="EMAIL" id="email" name="email" required>
+        </div>
+
+        <br>
+
+          <div>
+          <input id="inputDetalle" type="password" placeholder="PASSWORD" id="password" name="password" required>
+          </div>
+
+          <br>
+
+          <div>
+            <textarea id="inputDetalle" id="userReview"name="texto_de_reseña" id="texto_de_reseña" cols="5" rows="5" placeholder="WRITE YOUR REVIEW HERE!" required ></textarea>
+          </div>
+          <br>
+
+   <div>
+    <p>
+      <select name="puntaje_sobre_pelicula">
+
+        <option selected> CHOOSE A RATING! </option>
+        
+        <option value="1" >1</option>
+
+        <option value="2" >2</option>
+        
+        <option value="3" >3</option>
+
+        <option value="4" >4</option>
+
+        <option value="5" >5</option>
+        
+        <option value="6" >6</option>
+
+        <option value="7" >7</option>
+
+        <option value="8" >8</option>
+        
+        <option value="9" >9</option>
+
+        <option value="10" >10</option>
+        
+        </select>
+    </p>
+
+    </div>
+
  
-<a href="/usuario/crearReview?idPelicula=<%= idPelicula %>" id="createReview" >Click here to  Review this movie!</a>
+
+   <button id="submitt" type="submit" > SUBMIT </button>
+
+</form>
+
+
+<br>
+<br>
+
 
 
 <!-- Footer-->

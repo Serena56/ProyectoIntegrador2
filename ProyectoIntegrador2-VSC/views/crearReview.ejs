@@ -29,23 +29,23 @@
 <!--FORMULARIO DE LOGIN -->
 <form class="login-form" action= "/usuario/crearReview" method="POST">
                     <p>
-                      <input type="hidden" name="idPelicula" value="<%= idPelicula %>">
+                      <input type="hidden" name="id_pelicula" value="<%= idPelicula %>">
                     </p>
                     <p>
-                    <input id="userMail"  type="email" name="userMail" placeholder="MAIL" required>
+                    <input id="email"  type="email" name="email" placeholder="MAIL" required>
                     </p>
                     <p>
-                    <input type="password"  name="userPassword" id="userPassword"  placeholder="PASSWORD" required>
+                    <input type="password"  name="password" id="password"  placeholder="PASSWORD" required>
                     </p>
                     <br>
                     <p>
                       <h3> PLEASE WRITE YOUR REVIEW HERE!</h3>
                     </p>
                     <p>
-                      <textarea name="userReview" id="userReview" cols="5" rows="5" required> </textarea>
+                      <textarea name="texto_de_reseña" id="userReview" cols="5" rows="5" required> </textarea>
                       </p>
                       <p>
-                        <select name="rating">
+                        <select name="puntaje_sobre_pelicula">
 
                           <option selected> CHOOSE A RATING! </option>
                           
