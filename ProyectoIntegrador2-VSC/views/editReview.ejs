@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <script src="uikit/dist/js/uikit-icons.min.js"></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/HomeStyle.css">
+    <title> Function(Movie) </title>
+
+    <!-- Link a google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+
+  </head>
+
+<body>
+
+              <form class="login-form" action= "/usuario/reviews/edit/<%= resultado.id %>" method="POST">
+                <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid> 
+                    <div class="uk-background-cover" style="background-image: url('/images/logo.jpg');" uk-height-viewport></div>
+                    <div class="uk-padding-large">
+                        <h1>LOGIN AND EDIT YOUR REVIEW!</h1>
+                    <p>
+                    <input id="userMail"  type="email" name="email" placeholder="MAIL" required>
+                    </p>
+                    <p>
+                    <input type="password"  name="password" id="userPassword"  placeholder="PASSWORD" required>
+                    </p>
+                    <p>
+                      <textarea  id="userReview" name="resenia" id="texto_de_reseña" cols="5" rows="5" placeholder="WRITE YOUR REVIEW HERE!" required > <%= resultado.texto_de_reseña %> </textarea>
+                    </p>
+                    <p>
+                        <p> OLD RATING: <%= resultado.puntaje_sobre_pelicula %> | NEW RATING: </p>
+                        <input id="userReview" type="number" id="points" name="puntaje" class="uk-range" min="0" max="10" onchange="updateValue(this.value)">
+                    </p>
+                    <p>
+                    <button id="submit" type="submit" name="button" value="Login">
+                        SUBMIT
+                    </button>
+                    </p>
+                </div>
+            </div>
+                    </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="/javascripts/HomeScript.js"></script>

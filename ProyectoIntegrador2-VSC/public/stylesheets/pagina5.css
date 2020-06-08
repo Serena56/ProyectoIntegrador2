@@ -223,6 +223,14 @@ p.sinopsis{
     width: 43%;
   }
 
+  #aBusquedaa {
+    color: #FFD740;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px; 
+    text-align: center;
+    margin-left: 15%;
+  }
+
   #submitt {
     background-color: black;
     border: none;

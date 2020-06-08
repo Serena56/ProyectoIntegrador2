@@ -1,67 +1,67 @@
 
-// module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
 	
-// 	// nombre del modelo
-// 	let alias = "Resenas";
+	// nombre del modelo
+	let alias = "Resenas";
 	
-// 	// Columnas de la tabla
-// 	let cols = {
-// 		id: {
-// 			type: DataTypes.INTEGER,
-// 			primaryKey: true,
-// 		},
-// 		    id_pelicula: DataTypes.INTEGER,
-// 			id_usuario: DataTypes.INTEGER,
-// 			texto_de_reseña: DataTypes.STRING(1000),
-// 			fecha_de_creacion: DataTypes.DATE,
-//             fecha_de_actualizacion: DataTypes.DATE,
-//             puntaje_sobre_pelicula: DataTypes.INTEGER,
-// 	};
+	// Columnas de la tabla
+	let cols = {
+		id: {
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+		},
+		    id_pelicula: DataTypes.INTEGER,
+			id_usuario: DataTypes.INTEGER,
+			texto_de_reseña: DataTypes.STRING(1000),
+			fecha_de_creacion: DataTypes.DATE,
+            fecha_de_actualizacion: DataTypes.DATE,
+            puntaje_sobre_pelicula: DataTypes.INTEGER,
+	};
 
-// 	// Configuración del modelo
-// 	let config = {
-// 		tableName: 'reseñas', // nombre real de la tabla
-// 		timestamps: false, // cuando no tenemos las columnas createdAt y updatedAt
-// 	};
+	// Configuración del modelo
+	let config = {
+		tableName: 'reseñas', // nombre real de la tabla
+		timestamps: false, // cuando no tenemos las columnas createdAt y updatedAt
+	};
 
 
-// const Resena = sequelize.define(alias,cols,config);
+const Resenas = sequelize.define(alias,cols,config);
 
-// Resena.associate = function (models) {
-// 	Resena.belongsTo(models.Usuario, {
-// 		as: 'usuario',
-// 		foreignKey: 'id_usuario'
-// 	  })
-// 	}
-
-	
-
-// return Resena;
-
-// }
-
-module.exports = function (sequelize, DataTypes){   //esta funcion va a ser la que se exporte. 
-    const resenia = sequelize.define (
-        'Resenas', 
-        {
-            id_pelicula: DataTypes.INTEGER,
-            id_usuario: DataTypes.INTEGER,
-            texto_de_reseña: DataTypes.STRING,
-            fecha_de_creacion : DataTypes.DATE,
-            fecha_de_actualizacion : DataTypes.DATE,
-            puntaje_sobre_pelicula : DataTypes.INTEGER, 
-        }, 
-       {
-        timestamps: false,  
-        tableName: 'reseñas'  // si no especifico, va a buscar la tabla resenias (y no existe)
-       }
-    ); 
-
-    resenia.associate = function (models) {  // associate recibe una función que incluye a todos nuestros modelos del código. Acá dentro definimos las relaciones. 
-        resenia.belongsTo (models.usuario , {  // Una reseña PERTENECE a un usuario.
-            as: "usuario" ,
-            foreignKey: "id_usuario"
-        }); 
-    }
-    return resenia; 
+Resenas.associate = function (models) {  // associate recibe una función que incluye a todos nuestros modelos del código. Acá dentro definimos las relaciones. 
+    Resenas.belongsTo (models.usuario , {  // Una reseña PERTENECE a un usuario.
+        as: "usuario" ,
+        foreignKey: "id_usuario"
+    }); 
 }
+
+	
+
+return Resenas;
+
+}
+
+// module.exports = function (sequelize, DataTypes){   //esta funcion va a ser la que se exporte. 
+//     const Resenas = sequelize.define (
+//         'Resenas', 
+//         {
+//             id_pelicula: DataTypes.INTEGER,
+//             id_usuario: DataTypes.INTEGER,
+//             texto_de_reseña: DataTypes.STRING,
+//             fecha_de_creacion : DataTypes.DATE,
+//             fecha_de_actualizacion : DataTypes.DATE,
+//             puntaje_sobre_pelicula : DataTypes.INTEGER, 
+//         }, 
+//        {
+//         timestamps: false,  
+//         tableName: 'reseñas'  // si no especifico, va a buscar la tabla resenias (y no existe)
+//        }
+//     ); 
+
+//     resenia.associate = function (models) {  // associate recibe una función que incluye a todos nuestros modelos del código. Acá dentro definimos las relaciones. 
+//         resenia.belongsTo (models.usuario , {  // Una reseña PERTENECE a un usuario.
+//             as: "usuario" ,
+//             foreignKey: "id_usuario"
+//         }); 
+//     }
+//     return resenia; 
+// }

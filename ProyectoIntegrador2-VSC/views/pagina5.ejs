@@ -1,4 +1,4 @@
-<!-- DetallePelicula -->
+<!-- Detalle Pelicula -->
 
 
 <!DOCTYPE html>
@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/pagina5.css">
     <title> Function(Movie) </title>
+
     <!-- Link a google fonts -->
-    <link href= "https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
@@ -21,7 +22,7 @@
   </head>
   <body>
 
-<!-- Header-->
+    <!-- Header-->
 
 <header>
   <nav>
@@ -102,28 +103,73 @@ FORMULARIO DE LOGIN -->
   </nav>
 </header>
 
+
 <!-- Header-->
 
-    <div class="detalle">
-    </div>
-    <div class="trailer">
-      <iframe width="600" height="355" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<div class="starstar">
+  <button class='estrella' id='star'> <span uk-icon="star"></span> </button>
+</div>
+
+<div class="detalle">
+
+</div>
+
+<div class="trailer">
+  <iframe width="600" height="355" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 
-    <div class="uk-h3">
-      <input class= "botonRecomendaciones" type="submit" name="" value="See recommendations">
-    </div>
-    <div class="recomendaciones"> </div>
-    <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 2000;pause-on-hover: true">
+<div class="uk-h3">
+  <input class= "botonRecomendaciones" type="submit" name="" value="See recommendations">
+</div>
+<div class="recomendaciones"> </div>
+<div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 2000;pause-on-hover: true">
 
-        <ul class="uk-slideshow-items" id="popular"></ul>
+    <ul class="uk-slideshow-items" id="popular"></ul>
 
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 </div>
 
 <hr>
+
+<% if (resenaPelicula.length !=0) { %>
+<ul>
+<h2 id="tituloBusqueda"> FILM REVIEW'S:</h2>
+  <% for(let i= 0; i< resenaPelicula.length; i++) { %>
+      <li id="tituloReviews">
+          <p> "<%= resenaPelicula[i].texto_de_reseña%>" </p>
+        </li>
+        <li id="itemBusqueda">
+          <p>REVIEWED BY: <a id="aBusqueda" href="/usuario/logIn"> <%= resenaPelicula[i].usuario.nombre_de_usuario %> | (LOGIN TO WATCH PROFILE)</a> </p>
+        </li>
+        <li id="itemBusqueda">
+          <p>LAST UPDATE: <%= resenaPelicula[i].fecha_de_actualizacion %></p>
+        </li>
+        <li id="itemBusqueda">
+          <p>CREATION DATE: <%= resenaPelicula[i].fecha_de_creacion %></p>
+        </li>
+        <li id="itemBusqueda">
+          <p ><%= resenaPelicula[i].usuario.nombre_de_usuario %>'S RATE: <%= resenaPelicula[i].puntaje_sobre_pelicula %></p>
+        </li>
+        <hr>
+      <hr>
+      <% } %>
+
+</ul>
+
+<% } else { %>
+  <h2 id="tituloBusqueda" >THERE'S NO REVIEWS FOR THIS MOVIE YET, ADD YOURS!</h2> 
+  <% } %>
+
+
+    <a id="aBusquedaa" href="/usuario/logIn">CLICK HERE TO LOGIN AND ADD YOUR OWN REVIEWS!</a>
+
+<br>
+<br>
+
+
+
 
 <!-- Footer-->
 

@@ -140,7 +140,7 @@ VALUES (481848, 6, 'No pare de llorar en toda la pelicula pero vale la pena verl
 
 
 
-ALTER TABLE ProyectoIntegrador2.reseñas MODIFY COLUMN fecha_de_actualizacion TIMESTAMP on update CURRENT_TIMESTAMP  NULL;
+ALTER TABLE ProyectoIntegrador2.reseñas MODIFY COLUMN fecha_de_actualizacion TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL;
 
 ALTER TABLE ProyectoIntegrador2.reseñas MODIFY COLUMN fecha_de_creacion timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL;
 

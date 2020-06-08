@@ -46,22 +46,26 @@ router.get('/resultadoBusquedaUsuario', controller.resultadoBusquedaUsuario);
 // http://localhost:3000/usuario/detalleUsuario
 router.get('/detalleUsuario/:id', controller.mostrarDetalleUsuario);
 
-// // http://localhost:3000/usuario/crearReview
-// router.get('/crearReview', controller.mostrarCrearReview);
+// http://localhost:3000/usuario/reviews
+router.get('/reviews', controller.logUser);
 
-// // http://localhost:3000/usuario/crearReview
-// router.post('/crearReview', controller.crearReview);
+// http://localhost:3000/usuario/reviews
+router.post('/reviews', controller.confirmUser); 
 
-// // http://localhost:3000/usuario/detalle
-// router.post('/detalle', controller.crearReview);
+// http://localhost:3000/usuario/reviews
+router.get('/reviews/:id', controller.getReviews);
 
-// // http://localhost:3000/usuario/creaResena
-// router.post('/creaResena', controller.creaResena);
+// http://localhost:3000/usuario/reviews/delete
+router.get('/reviews/delete/:id', controller.deleteReview);
 
-// http://localhost:3000/usuario/misReviews
-router.get('/misReviews', controller.misReviews);
+// http://localhost:3000/usuario/reviews/delete
+router.post('/reviews/delete/:id', controller.confirmDelete);
 
+// http://localhost:3000/usuario/reviews/edit
+router.get('/reviews/edit/:id', controller.showEdit); 
 
+// http://localhost:3000/usuario/reviews/edit
+router.post('/reviews/edit/:id', controller.confirmEdit);
 
 
 

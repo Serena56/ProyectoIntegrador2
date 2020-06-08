@@ -9,7 +9,9 @@ const homeCont = {
 
     busqueda: function (req, res) {
         res.render('pagina4');
-}
+},
+
+
 
 
 };
